@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/fossil-scm/main/json-schema/fossil-scm-post-json-user-get-response-schema.json",
+  "title": "PostJsonUserGetResponse",
+  "x-generated": "2026-09-22",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_ae-authored/fossil-scm-openapi-generated.yml#/components/schemas/PostJsonUserGetResponse",
+  "type": "object",
+  "properties": {
+    "uid": {
+      "type": "integer",
+      "description": "User ID"
+    },
+    "name": {
+      "type": "string",
+      "description": "User name"
+    },
+    "capabilities": {
+      "type": "string",
+      "description": "User capabilities string"
+    },
+    "info": {
+      "type": "string",
+      "description": "User info URL"
+    },
+    "timestamp": {
+      "type": "integer",
+      "description": "Timestamp field (unspecified meaning)"
+    }
+  }
+}

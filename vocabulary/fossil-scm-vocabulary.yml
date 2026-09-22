@@ -1,0 +1,20 @@
+generated: '2026-09-22'
+method: derived
+generator: derive-vocabulary.py
+source: openapi/_ae-authored/fossil-scm-openapi-generated.yml
+vocabulary:
+  name: Fossil SCM Domain Vocabulary
+  description: 'Terms declared by Fossil SCM''s own API contract: its resource groups, objects and enumerations, with the contract''s definitions.
+    Derived, not authored.'
+  version: '2026-09-22'
+  terms:
+  - term: PostJsonUserGetRequest
+    definition: 'Object declared by the contract with fields: name.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/fossil-scm-openapi-generated.yml#/components/schemas/PostJsonUserGetRequest
+  - term: PostJsonUserGetResponse
+    definition: 'Object declared by the contract with fields: uid, name, capabilities, info, timestamp.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/fossil-scm-openapi-generated.yml#/components/schemas/PostJsonUserGetResponse

@@ -1,0 +1,25 @@
+generated: '2026-09-22'
+method: none
+source: pre-flight dossier (docs platform, portal detections) + CNAME chains and response headers of the hosts apis.yml names
+registry: all/0-working/vendors.yml
+areas_vocabulary:
+- documentation
+- developer-portal
+- api-gateway
+- cdn
+- hosting
+- sdk-generation
+- api-collections
+- status-page
+- support
+- community
+- identity
+- mcp-hosting
+vendors: []
+checked:
+- 'docs-platform: no-docs-host'
+- fossil-scm.org (Website)
+- fossil-scm.org (Documentation)
+- fossil-scm.org (Support)
+- fossil.wanderinghorse.net (baseURL)
+note: no vendor fingerprint on any host the record names; a hand-built surface, or hosts the pipeline has not yet found

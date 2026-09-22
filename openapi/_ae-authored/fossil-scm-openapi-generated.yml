@@ -1,0 +1,153 @@
+openapi: 3.1.0
+info:
+  title: Fossil SCM API
+  version: '2026-09-22'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-09-22: 5 operation(s) read from 4 public documentation page(s) (each operation
+    names its page in x-source). This is not the provider''s published contract; Fossil SCM has published no machine-readable contract that the
+    pipeline could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 3
+    documentation: 2
+    pages-with-code: 2
+    pages-read: 4
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-09-22'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://fossil-scm.org/home/doc/trunk/www/json-api/tips.md
+  - https://fossil-scm.org/home/doc/trunk/www/json-api/api-user.md
+  - https://fossil-scm.org/home/doc/trunk/www/sync.wiki
+  - https://fossil-scm.org/home/doc/trunk/www/blockchain.md
+servers:
+- url: https://fossil.wanderinghorse.net
+paths:
+  /home/xfer:
+    post:
+      operationId: post_home_xfer
+      tags:
+      - Home
+      summary: POST /home/xfer
+      x-source: https://fossil-scm.org/home/doc/trunk/www/sync.wiki
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: http
+        snippet: "POST /home/xfer HTTP/1.0\nHost: fossil-scm.hwaci.com:80\nContent-Type: application/x-fossil\nContent-Length: 4216\n content...\
+          \ \n In the example above, the pathname given after the POST keyword\non the first line is a copy of the URL pathname. The Host: parameter\n\
+          is also taken from the URL. The content type is always either\n\"application/x-fossil\" or \"application/x-fossil-debug\". The \"x-fossil\"\
+          \ncontent t"
+  /json/query:
+    get:
+      operationId: get_json_query
+      tags:
+      - Json
+      summary: GET /json/query
+      x-source: https://fossil-scm.org/home/doc/trunk/www/json-api/tips.md
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl  --data-binary @x.json  --header 'Content-Type: application/json'  'http://localhost:8080/json/query'\n The relevant parts\
+          \ for encoding are the --header flag for wget and"
+    post:
+      operationId: post_json_query
+      tags:
+      - Json
+      summary: 'Fossil JSON API: Tips and Tricks'
+      x-source: https://fossil-scm.org/home/doc/trunk/www/json-api/tips.md
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /json/user/get:
+    post:
+      operationId: post_json_user_get
+      tags:
+      - Json
+      summary: Get User Info
+      x-source: https://fossil-scm.org/home/doc/trunk/www/json-api/api-user.md
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostJsonUserGetRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostJsonUserGetResponse'
+      x-evidence:
+        kind: documentation
+  /wikis:
+    get:
+      operationId: get_wikis
+      tags:
+      - Wikis
+      summary: GET /wikis
+      x-source: https://fossil-scm.org/home/doc/trunk/www/json-api/tips.md
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl , noting that they have different syntaxes for each\n( --header=X vs --header X ). \n Example JavaScript (Browser and Shell)\
+          \ \n In the fossil source tree, in the ajax directory , is test/demo code\nimplemented in HTML+JavaScript. While it is still quite experimental,\
+          \ it\ndemonstrates one approach to creating client-side wrapper APIs for\nremote Fossil/JSON repositories. \n There is some additional\
+          \ J"
+components:
+  schemas:
+    PostJsonUserGetRequest:
+      type: object
+      properties:
+        name:
+          type: string
+          description: USERNAME (provided in POST.payload)
+      required:
+      - name
+    PostJsonUserGetResponse:
+      type: object
+      properties:
+        uid:
+          type: integer
+          description: User ID
+        name:
+          type: string
+          description: User name
+        capabilities:
+          type: string
+          description: User capabilities string
+        info:
+          type: string
+          description: User info URL
+        timestamp:
+          type: integer
+          description: Timestamp field (unspecified meaning)
+  securitySchemes:
+    session_cookie:
+      type: apiKey
+      in: header
+      name: Cookie
+      x-source: https://fossil-scm.org/home/doc/trunk/www/password.wiki
+    sync_protocol_credentials:
+      type: http
+      scheme: basic
+      x-source: https://fossil-scm.org/home/doc/trunk/www/password.wiki
+tags:
+- name: Home
+- name: Json
+- name: Wikis
+security:
+- session_cookie: []
+- sync_protocol_credentials: []

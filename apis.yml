@@ -1,23 +1,99 @@
 aid: fossil-scm
+
 name: Fossil SCM
-description: 'Fossil SCM is a company surfaced via the API Evangelist harvest backlog (source: version-control)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: Fossil SCM is an open-source, distributed version control system that includes an integrated bug tracking, wiki, and web interface.
+  It provides a self-contained, easy-to-deploy solution for software configuration management, suitable for both small projects and large codebases.
+  The system emphasizes simplicity, reliability, and a single-file repository model, making it a coherent alternative to other SCM tools.
+
 url: https://raw.githubusercontent.com/api-evangelist/fossil-scm/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:version-control
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-22 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-22'
+
 modified: '2026-09-22'
+
 tags:
-- Company
-apis: []
+- Version-Control
+- Open-Source
+- SCM
+- Distributed
+- Configuration-Management
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Spectral
+  url: rules/fossil-scm-rules.yml
+- type: JSONLD
+  url: json-ld/fossil-scm-context.jsonld
+- type: Vocabulary
+  url: vocabulary/fossil-scm-vocabulary.yml
+- type: DataModel
+  url: data-model/fossil-scm-data-model.yml
+- type: ChangeLog
+  url: changelog/fossil-scm-changelog.yml
+- type: Authentication
+  url: authentication/fossil-scm-authentication.yml
+- type: Conformance
+  url: conformance/fossil-scm-conformance.yml
+- type: DomainSecurity
+  url: security/fossil-scm-domain-security.yml
 - type: Website
   url: https://fossil-scm.org/
+- type: Documentation
+  url: https://fossil-scm.org/home/doc/trunk/www/index.wiki
+- type: Download
+  url: https://fossil-scm.org/home/uv/download.html
+- type: QuickStart
+  url: https://fossil-scm.org/home/doc/trunk/www/quickstart.wiki
+- type: Support
+  url: https://fossil-scm.org/forum/forum
+
+apis:
+- name: Fossil SCM API
+  description: Fossil SCM provides a web interface and command-line tool but does not expose a public REST API.
+  humanURL: https://fossil-scm.org/home/doc/trunk/www/index.wiki
+  aid: fossil-scm:fossil-scm-api-2
+- aid: fossil-scm:fossil-scm-api
+  name: Fossil SCM API
+  description: 'Fossil SCM API as documented publicly: 5 operations. Contract generated from the documentation by API Evangelist (2026-09-22);
+
+    not the provider''s own document.'
+  humanURL: https://fossil-scm.org/home/doc/trunk/www/json-api/tips.md
+  baseURL: https://fossil.wanderinghorse.net
+  properties:
+  - type: OpenAPI
+    url: openapi/_ae-authored/fossil-scm-openapi-generated.yml
+    x-provenance: generated
+  - type: JSONSchema
+    url: json-schema/fossil-scm-post-json-user-get-response-schema.json
+  - type: JSONSchema
+    url: json-schema/fossil-scm-post-json-user-get-request-schema.json
+
+x-coverage:
+  state: none
+  reason: not-a-software-company
+  detail: Fossil SCM is a version control system without a public API.
+  evidence:
+  - url: https://fossil-scm.org/home/doc/trunk/www/index.wiki
+    status: 200
+  checked: 2026-09-22
+x-enrichment:
+  date: '2026-09-22'
+  status: enriched
+  artifacts_added: 14
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local

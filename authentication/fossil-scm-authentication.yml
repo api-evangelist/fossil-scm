@@ -1,0 +1,23 @@
+generated: '2026-09-22'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://fossil-scm.org/home/doc/trunk/www/password.wiki
+sources:
+- https://fossil-scm.org/home/doc/trunk/www/password.wiki
+- https://fossil-scm.org/home/doc/trunk/www/quickstart.wiki
+- https://fossil-scm.org/home/doc/trunk/www/caps/admin-v-setup.md
+description: Authentication methods described in Fossil documentation
+schemes:
+- type: apiKey
+  name: session cookie
+  evidence: If they match, the server sets a cookie on the client to record the login.
+  location: header
+  header: Cookie
+  how_to_obtain: Obtained after a successful login via the web interface; the server returns a Set-Cookie header.
+- type: http-basic
+  name: sync protocol credentials
+  evidence: The client normally gets the login and password from the "remote URL". http://login:password@servername.org/path
+  location: header
+  header: Authorization
+  how_to_obtain: Credentials are supplied as user:password in the repository URL used for sync, push, pull, or clone operations.
+docs: https://fossil-scm.org/home/doc/trunk/www/password.wiki
