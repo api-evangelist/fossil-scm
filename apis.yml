@@ -22,6 +22,12 @@ created: '2026-09-22'
 modified: '2026-09-22'
 
 tags:
+- Version Control
+- Open Source
+- SCM
+- Distributed
+- Configuration Management
+tags_raw:
 - Version-Control
 - Open-Source
 - SCM
@@ -64,25 +70,52 @@ common:
 
 apis:
 - name: Fossil SCM API
-  description: Fossil SCM provides a web interface and command-line tool but does not expose a public REST API.
+  description: >-
+    Fossil SCM provides a web interface and command-line tool but does not expose a public REST API.
   humanURL: https://fossil-scm.org/home/doc/trunk/www/index.wiki
   aid: fossil-scm:fossil-scm-api-2
-- aid: fossil-scm:fossil-scm-api
-  name: Fossil SCM API
-  description: 'Fossil SCM API as documented publicly: 5 operations. Contract generated from the documentation by API Evangelist (2026-09-22);
-
-    not the provider''s own document.'
-  humanURL: https://fossil-scm.org/home/doc/trunk/www/json-api/tips.md
+- aid: fossil-scm:fossil-scm-home-api
+  name: Fossil SCM Home API
+  description: The Home API from Fossil SCM — 1 operation(s) for home.
+  humanURL: https://fossil-scm.org/home/doc/trunk/www/index.wiki
   baseURL: https://fossil.wanderinghorse.net
+  tags:
+  - Home
   properties:
   - type: OpenAPI
-    url: openapi/_ae-authored/fossil-scm-openapi-generated.yml
-    x-provenance: generated
+    url: openapi/fossil-scm-home-api-openapi.yml
   - type: JSONSchema
     url: json-schema/fossil-scm-post-json-user-get-response-schema.json
   - type: JSONSchema
     url: json-schema/fossil-scm-post-json-user-get-request-schema.json
-
+- aid: fossil-scm:fossil-scm-json-api
+  name: Fossil SCM JSON API
+  description: The Json API from Fossil SCM — 2 operation(s) for json.
+  humanURL: https://fossil-scm.org/home/doc/trunk/www/index.wiki
+  baseURL: https://fossil.wanderinghorse.net
+  tags:
+  - Json
+  properties:
+  - type: OpenAPI
+    url: openapi/fossil-scm-json-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/fossil-scm-post-json-user-get-response-schema.json
+  - type: JSONSchema
+    url: json-schema/fossil-scm-post-json-user-get-request-schema.json
+- aid: fossil-scm:fossil-scm-wikis-api
+  name: Fossil SCM Wikis API
+  description: The Wikis API from Fossil SCM — 1 operation(s) for wikis.
+  humanURL: https://fossil-scm.org/home/doc/trunk/www/index.wiki
+  baseURL: https://fossil.wanderinghorse.net
+  tags:
+  - Wikis
+  properties:
+  - type: OpenAPI
+    url: openapi/fossil-scm-wikis-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/fossil-scm-post-json-user-get-response-schema.json
+  - type: JSONSchema
+    url: json-schema/fossil-scm-post-json-user-get-request-schema.json
 x-coverage:
   state: none
   reason: not-a-software-company

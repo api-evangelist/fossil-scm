@@ -1,0 +1,54 @@
+openapi: 3.2.0
+info:
+  title: Fossil SCM Home API
+  version: '2026-09-22'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-09-22: 5 operation(s) read from 4 public documentation page(s) (each operation names its page in x-source). This is not the provider''s published contract; Fossil SCM has published no machine-readable contract that the pipeline could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 3
+    documentation: 2
+    pages-with-code: 2
+    pages-read: 4
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-09-22'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://fossil-scm.org/home/doc/trunk/www/json-api/tips.md
+  - https://fossil-scm.org/home/doc/trunk/www/json-api/api-user.md
+  - https://fossil-scm.org/home/doc/trunk/www/sync.wiki
+  - https://fossil-scm.org/home/doc/trunk/www/blockchain.md
+servers:
+- url: https://fossil.wanderinghorse.net
+security:
+- session_cookie: []
+- sync_protocol_credentials: []
+tags:
+- name: Home
+paths:
+  /home/xfer:
+    post:
+      operationId: post_home_xfer
+      tags:
+      - Home
+      summary: POST /home/xfer
+      x-source: https://fossil-scm.org/home/doc/trunk/www/sync.wiki
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: http
+        snippet: "POST /home/xfer HTTP/1.0\nHost: fossil-scm.hwaci.com:80\nContent-Type: application/x-fossil\nContent-Length: 4216\n content... \n In the example above, the pathname given after the POST keyword\non the first line is a copy of the URL pathname. The Host: parameter\nis also taken from the URL. The content type is always either\n\"application/x-fossil\" or \"application/x-fossil-debug\". The \"x-fossil\"\ncontent t"
+components:
+  securitySchemes:
+    session_cookie:
+      type: apiKey
+      in: header
+      name: Cookie
+      x-source: https://fossil-scm.org/home/doc/trunk/www/password.wiki
+    sync_protocol_credentials:
+      type: http
+      scheme: basic
+      x-source: https://fossil-scm.org/home/doc/trunk/www/password.wiki
