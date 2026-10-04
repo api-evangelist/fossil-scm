@@ -80,6 +80,8 @@ apis:
   humanURL: https://fossil-scm.org/home/doc/trunk/www/index.wiki
   baseURL: https://fossil.wanderinghorse.net
   tags:
+  - Homes
+  tags_raw:
   - Home
   properties:
   - type: OpenAPI
@@ -94,6 +96,8 @@ apis:
   humanURL: https://fossil-scm.org/home/doc/trunk/www/index.wiki
   baseURL: https://fossil.wanderinghorse.net
   tags:
+  - JSON
+  tags_raw:
   - Json
   properties:
   - type: OpenAPI
