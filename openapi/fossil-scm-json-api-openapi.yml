@@ -76,14 +76,6 @@ paths:
         kind: documentation
 components:
   schemas:
-    PostJsonUserGetRequest:
-      type: object
-      properties:
-        name:
-          type: string
-          description: USERNAME (provided in POST.payload)
-      required:
-      - name
     PostJsonUserGetResponse:
       type: object
       properties:
@@ -102,6 +94,14 @@ components:
         timestamp:
           type: integer
           description: Timestamp field (unspecified meaning)
+    PostJsonUserGetRequest:
+      type: object
+      properties:
+        name:
+          type: string
+          description: USERNAME (provided in POST.payload)
+      required:
+      - name
   securitySchemes:
     session_cookie:
       type: apiKey
