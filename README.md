@@ -64,5 +64,114 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Fossil SCM is a company surfaced via the API Evangelist harvest backlog (source: version-control) and added to the network as a stub for full-pipeline profiling.
-- https://fossil-scm.org/
+Fossil SCM is an open-source, distributed version control system that includes an integrated bug tracking, wiki, and web interface. It provides a self-contained, easy-to-deploy solution for software configuration management, suitable for both small projects and large codebases. The system emphasizes simplicity, reliability, and a single-file repository model, making it a coherent alternative to other SCM tools.
+
+**Areas:** Version Control · Open Source · SCM · Distributed · Configuration Management
+
+## Fossil SCM on APIs.io
+
+Everything profiled for Fossil SCM is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/fossil-scm/](https://apis.io/providers/fossil-scm/)** — or go straight to one of the APIs or properties below.
+
+### APIs (4)
+
+- [Fossil SCM API](https://apis.io/apis/fossil-scm/fossil-scm-api-2/) — Fossil SCM provides a web interface and command-line tool but does not expose a public REST API.
+- [Fossil SCM Home API](https://apis.io/apis/fossil-scm/fossil-scm-home-api/) — The Home API from Fossil SCM — 1 operation(s) for home.
+- [Fossil SCM JSON API](https://apis.io/apis/fossil-scm/fossil-scm-json-api/) — The Json API from Fossil SCM — 2 operation(s) for json.
+- [Fossil SCM Wikis API](https://apis.io/apis/fossil-scm/fossil-scm-wikis-api/) — The Wikis API from Fossil SCM — 1 operation(s) for wikis.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [fossil-scm-mcp.yml](https://apis.io/servers/fossil-scm/fossil-scm-mcp-yml/)
+
+#### JSON Schema (2)
+
+The data models the API reads and writes.
+
+- [PostJsonUserGetRequest](https://apis.io/schemas/fossil-scm/fossil-scm-post-json-user-get-request/)
+- [PostJsonUserGetResponse](https://apis.io/schemas/fossil-scm/fossil-scm-post-json-user-get-response/)
+
+#### JSON-LD (1)
+
+Linked-data contexts for the provider's vocabulary.
+
+- [Fossil Scm Context](https://apis.io/jsonld/fossil-scm/fossil-scm-context/)
+
+#### Governance rules (1)
+
+Spectral rulesets for the provider's contracts.
+
+- [Fossil SCM API Rules](https://apis.io/rules/fossil-scm/fossil-scm-rules/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Fossil Scm Authentication](https://apis.io/security/fossil-scm/fossil-scm-authentication/)
+- [Fossil Scm Domain Security](https://apis.io/security/fossil-scm/fossil-scm-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://fossil-scm.org/)
+- [Documentation](https://fossil-scm.org/home/doc/trunk/www/index.wiki)
+- [Support](https://fossil-scm.org/forum/forum)
+
+## API Evangelist rating
+
+**Kin Score 20.7** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 58.9 |
+| Contract quality | 21.4 |
+| Contract governance | 22.0 |
+| Operational transparency | 15.8 |
+| Developer ergonomics | 26.2 |
+| Access clarity | 0.0 |
+
+**Agent readiness 15.5** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 16.7** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/fossil-scm/](https://apis.io/providers/fossil-scm/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Fossil SCM: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/fossil-scm/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
